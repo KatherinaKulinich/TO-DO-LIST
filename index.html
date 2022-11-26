@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>TO DO LIST</title>
+</head>
+<body class="body">
+    <div class="wrapper">
+        <h1 class="title">
+            to do <span>list</span> 
+        </h1>
+        <div class="main-block">
+            <form 
+                action="#" 
+                method="post" 
+                name="listToDo"
+                id="form"
+            >
+                <input 
+                    type="text" 
+                    name="newTaskTodo"
+                    id="newTaskTodo"
+                    placeholder="Create new task..."
+                >
+                <button 
+                    type="submit" 
+                    id="buttonCreateTask"
+                >
+                    <svg 
+                        version="1.1" 
+                        width="38" 
+                        height="38" 
+                        viewBox="0 0 32 32"
+                        class="button-icon"
+                    >
+                        <path d="M28 18c0-7.73-6.27-14-14-14s-14 6.27-14 14c0-5.523 4.477-10 10-10s10 4.477 10 10v2h-4l8 8 8-8h-4v-2z"></path>
+                    </svg>
+                </button>
+            </form>
+            <ul id="tasksList"></ul>
+            <div class="list-footer">
+                <p id="tasksSum"></p>
+                <button 
+                    type="button" 
+                    id="buttonDeleteAll"
+                >
+                    Clear all
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

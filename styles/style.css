@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Public+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    background: linear-gradient(to bottom, #1B1D32,  #000014);
+}
+
+.wrapper {
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 96px;
+    line-height: 156px;
+    letter-spacing: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #FFFFFF;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.title span {
+    background: linear-gradient(to bottom, #12AD2B,  #254117);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*   main  part  */
+
+.main-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form {
+   display: flex;
+   margin-bottom: 40px;
+}
+
+#newTaskTodo {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: none;
+    background-color: #25273C;
+    color: #FFFFFF;
+    font-family: 'Dancing Script', cursive;
+    width: 600px;
+    height: 70px;
+    padding: 10px 30px;
+    font-size: 36px;
+    line-height: 59px;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+#newTaskTodo::placeholder {
+    font-family: 'Dancing Script', cursive;
+}
+
+#buttonCreateTask {
+    height: 70px;
+    width: 100px;
+    border: none;
+    background-color: #12AD2B;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin: 0;
+}
+
+#buttonCreateTask:hover {
+   background-color: #006400;
+}
+
+#buttonCreateTask path {
+    fill: #FFFFFF;
+}
+
+#tasksList {
+    margin: 0;
+    padding: 0;
+    max-height: 350px;
+    overflow-y:scroll;
+}
+
+.list-item {
+    list-style-type: none;
+    width: 700px;
+    max-width: 700px;
+    height: 70px;
+    background-color: #25273C;
+    padding: 10px 15px;
+    border-bottom: 4px solid rgba(72, 64, 64, 0.37);
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.item-unit {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+/*  li text before and after check */
+
+.list-item-text {
+    color: #FFFFFF;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 600px;
+    overflow-x: scroll;
+}
+
+.list-item-text-checked {
+    text-decoration: line-through;
+    opacity: 50%;
+}
+
+
+
+/*  button before checked  */
+.button-check {
+    background-color: transparent;
+    border: 1px solid #12AD2B;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.button-check:hover {
+    border-color: #006400;
+}
+
+
+/*  button checked  */
+.button-check-active {
+    background: linear-gradient(0.25turn, #12AD2B,  #254117);
+    position: relative;
+}
+
+.button-check-active::after{
+    content: '';
+    background-image: url('../images/checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/*  button trash */
+
+.button-trash {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+}
+
+.button-trash path {
+    opacity: 0.3;
+}
+
+.button-trash:hover path {
+    opacity: 0.8;
+}
+
+.button-trash:active path {
+    opacity: 1;
+    fill: #006400;
+}
+
+
+/*   main-block footer   */
+
+.list-footer {
+    width: 700px;
+    max-width: 700px;
+    height: 70px;
+    background-color: #25273C;
+    padding:  15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #12AD2B;
+}
+
+#tasksSum {
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Public Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+#buttonDeleteAll {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #006400;
+    border: none;
+    background-color: transparent;
+    font-family: 'Public Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+#buttonDeleteAll:hover {
+    color: #12AD2B;
+}
+
+
+
+
+
