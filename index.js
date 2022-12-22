@@ -12,6 +12,7 @@ createList(allTasks);
 
 
 function addNewTask(task) {
+
     const data = JSON.parse(localStorage.getItem('tasks')) || [];
     data.push(task);
     localStorage.setItem('tasks', JSON.stringify(data));
@@ -32,7 +33,10 @@ form.addEventListener('submit', (event) => {
 
     const id = Date.now();
     const newTask = new CreateTask(id);
-    addNewTask(newTask);
+
+    if (newTask.text !== '') {
+        addNewTask(newTask);
+    }
     
     form.elements['newTaskTodo'].value = '';
 })
